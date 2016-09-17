@@ -114,6 +114,7 @@ public class ColorBlobDetectionView extends SampleCvViewBase implements OnTouchL
         if (mIsColorSelected)
         {            
         	mDetector.process(mRgba);
+            //TODO: Implement time constraint and pixel comparison for boundary conditions of pendulum
         	List<MatOfPoint> contours = mDetector.getContours();
             Log.e(TAG, "Contours count: " + contours.size());
         	Imgproc.drawContours(mRgba, contours, -1, CONTOUR_COLOR);

@@ -75,7 +75,6 @@ public abstract class SampleCvViewBase extends SurfaceView implements SurfaceHol
                 mCamera.set(Highgui.CV_CAP_PROP_FRAME_HEIGHT, mFrameHeight);
             }
         }
-
     }
     
     public void surfaceChanged(SurfaceHolder _holder, int format, int width, int height) {
