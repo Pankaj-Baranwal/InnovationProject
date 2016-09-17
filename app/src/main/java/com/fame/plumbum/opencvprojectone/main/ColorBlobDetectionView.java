@@ -13,14 +13,12 @@ import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
-import org.opencv.core.Point;
 import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.highgui.Highgui;
 import org.opencv.highgui.VideoCapture;
 import org.opencv.imgproc.Imgproc;
-import org.opencv.utils.Converters;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -133,12 +131,12 @@ public class ColorBlobDetectionView extends SampleCvViewBase implements OnTouchL
             } else {
                 res = new Mat();
             }
-            List<Point> lista = new ArrayList<>();
-            Converters.Mat_to_vector_Point(contours.get(1), lista);
-            Log.e("Points", lista.get(0).toString());
-            Log.e("Points", lista.get(1).toString());
-            Converters.Mat_to_vector_Point(contours.get(2), lista);
-            Log.e("Points", lista.get(0).toString());
+//            List<Point> lista = new ArrayList<>();
+//            Converters.Mat_to_vector_Point(contours.get(1), lista);
+//            Log.e("Points", lista.get(0).toString());
+//            Log.e("Points", lista.get(1).toString());
+//            Converters.Mat_to_vector_Point(contours.get(2), lista);
+//            Log.e("Points", lista.get(0).toString());
             Imgproc.drawContours(mRgba, contours, -1, CONTOUR_COLOR);
             
             Mat colorLabel = mRgba.submat(2, 34, 2, 34);
